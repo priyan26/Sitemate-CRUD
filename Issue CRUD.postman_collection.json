@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "2d83f472-2110-41b0-933c-bb3f8d6608b9",
+		"name": "Issue CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10777094",
+		"_collection_link": "https://universal-station-577875.postman.co/workspace/a895ac76-8b77-4bb8-917f-f4d08e5b9bcd/collection/10777094-2d83f472-2110-41b0-933c-bb3f8d6608b9?action=share&source=collection_link&creator=10777094"
+	},
+	"item": [
+		{
+			"name": "Create Issue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"sample title\",\r\n    \"description\": \"sample description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/issues",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"issues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Issues",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/issues",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"issues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Issue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/issues/65ebb6e73befa2c1efc2a04a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"issues",
+						"65ebb6e73befa2c1efc2a04a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Issue",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"sample titlesdvd\",\r\n    \"description\": \"sample description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/issues/65ebb6e73befa2c1efc2a04a/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"issues",
+						"65ebb6e73befa2c1efc2a04a",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/issues/65ebb6c860d8c891705fc481",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"issues",
+						"65ebb6c860d8c891705fc481"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
