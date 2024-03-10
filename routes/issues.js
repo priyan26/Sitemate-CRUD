@@ -23,7 +23,7 @@ router.post("/", async(req,res) => {
         await issue.save()
         res.json(issue)
     }catch(e){
-        res.send("Issue saving failed")
+        res.send(e)
     }
 })
 
@@ -40,12 +40,12 @@ router.get("/:id", async(req,res) => {
 //update issue
 router.put("/:id/update", async(req,res) => {
     try{
-        const issue = new Issue({
-            title: req.body.title,
+          const updatedFields = {
+            title:  req.body.title,
             description: req.body.description
-          });
+          }
 
-        const updatedIssue = await Issue.findOneAndUpdate({_id:req.params.id},issue,{new:true})
+        const updatedIssue = await Issue.findOneAndUpdate({_id:req.params.id}, { $set: updatedFields },{new:true})
         console.log(req.params.id)
         res.json(updatedIssue)
     }catch(e){

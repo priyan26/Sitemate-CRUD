@@ -1,5 +1,6 @@
 const express = require("express")
 const mongoose = require("mongoose")
+const cors = require('cors');
 
 const issuesRoute = require("./routes/issues")
 
@@ -7,7 +8,9 @@ const mongoDbUrl = "mongodb+srv://pabeyasekare:4DowoNk5uAEkUSd9@cluster0.yuhmoig
 
 const app =  express()
 
-mongoose.connect(mongoDbUrl,{useNewUrlParser:true})
+app.use(cors());
+
+mongoose.connect(mongoDbUrl)
 
 const connection = mongoose.connection
 
